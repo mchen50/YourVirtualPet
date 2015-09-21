@@ -15,6 +15,7 @@
 		974B82561BAF81B200A493F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974B82551BAF81B200A493F0 /* Images.xcassets */; };
 		974B82591BAF81B200A493F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 974B82571BAF81B200A493F0 /* LaunchScreen.xib */; };
 		974B82651BAF81B200A493F0 /* YourVitualPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974B82641BAF81B200A493F0 /* YourVitualPetTests.swift */; };
+		974B83451BAFAEC600A493F0 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 974B83441BAFAEC600A493F0 /* img */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		974B825E1BAF81B200A493F0 /* YourVitualPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourVitualPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		974B82631BAF81B200A493F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974B82641BAF81B200A493F0 /* YourVitualPetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourVitualPetTests.swift; sourceTree = "<group>"; };
+		974B83441BAFAEC600A493F0 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		974B82471BAF81B200A493F0 /* YourVitualPet */ = {
 			isa = PBXGroup;
 			children = (
+				974B83441BAFAEC600A493F0 /* img */,
 				974B824A1BAF81B200A493F0 /* AppDelegate.swift */,
 				974B824C1BAF81B200A493F0 /* GameScene.sks */,
 				974B824E1BAF81B200A493F0 /* GameScene.swift */,
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974B83451BAFAEC600A493F0 /* img in Resources */,
 				974B82591BAF81B200A493F0 /* LaunchScreen.xib in Resources */,
 				974B82561BAF81B200A493F0 /* Images.xcassets in Resources */,
 				974B824D1BAF81B200A493F0 /* GameScene.sks in Resources */,
@@ -415,6 +419,7 @@
 				974B826A1BAF81B200A493F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		974B826B1BAF81B200A493F0 /* Build configuration list for PBXNativeTarget "YourVitualPetTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				974B826D1BAF81B200A493F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
