@@ -29,12 +29,15 @@ class GameScene: SKScene {
         hungryLabel.fontSize = 30
         hungryLabel.text = "Hungry: \(hungryLevel)"
         hungryLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        hungryLabel.zPosition = 11
         self.addChild(hungryLabel)
+        
         
         happyLabel.fontName = "Helvetica"
         happyLabel.fontSize = 30
         happyLabel.text = "Happy: \(happyLevel)"
         happyLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2-30)
+        happyLabel.zPosition = 11
         self.addChild(happyLabel)
         
         
