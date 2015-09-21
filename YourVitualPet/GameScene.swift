@@ -39,19 +39,19 @@ class GameScene: SKScene {
         
         
         //set up background
-        var bgTexture = SKTexture(imageNamed: "img/bg/home.png")
+        let bgTexture = SKTexture(imageNamed: "img/bg/home.png")
         bg = SKSpriteNode(texture: bgTexture)
         bg.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         bg.size = self.frame.size
         self.addChild(bg)
         
         //Set up idle animation
-        var petTexture = SKTexture(imageNamed: "img/cat/idle_side/0.png")
-        var petTexture1 = SKTexture(imageNamed: "img/cat/idle_side/1.png")
-        var petTexture2 = SKTexture(imageNamed: "img/cat/idle_side/2.png")
-        var petTexture3 = SKTexture(imageNamed: "img/cat/idle_side/3.png")
+        let petTexture = SKTexture(imageNamed: "img/cat/idle_side/0.png")
+        let petTexture1 = SKTexture(imageNamed: "img/cat/idle_side/1.png")
+        let petTexture2 = SKTexture(imageNamed: "img/cat/idle_side/2.png")
+        let petTexture3 = SKTexture(imageNamed: "img/cat/idle_side/3.png")
         
-        var animation = SKAction.animateWithTextures([petTexture,petTexture1,petTexture2,petTexture3], timePerFrame: 0.5)
+        let animation = SKAction.animateWithTextures([petTexture,petTexture1,petTexture2,petTexture3], timePerFrame: 0.5)
         
         //default action
         makePetIdle = SKAction.repeatActionForever(animation)
@@ -67,13 +67,13 @@ class GameScene: SKScene {
         self.addChild(pet)
         
         //button set up
-        var cat_fun_texture = SKTexture(imageNamed: "img/icons/cat_fun.png")
+        let cat_fun_texture = SKTexture(imageNamed: "img/icons/cat_fun.png")
         cat_fun_button = SKSpriteNode(texture: cat_fun_texture, size: CGSizeMake(70,70))
         cat_fun_button.position = CGPoint(x: CGRectGetMidX(self.frame)+160, y: CGRectGetMidY(self.frame)+70)
         cat_fun_button.zPosition = 11
         self.addChild(cat_fun_button)
         
-        var cat_food_texture = SKTexture(imageNamed: "img/icons/cat_food.png")
+        let cat_food_texture = SKTexture(imageNamed: "img/icons/cat_food.png")
         cat_food_button = SKSpriteNode(texture: cat_food_texture , size: CGSizeMake(70,70))
         cat_food_button.position = CGPoint(x: CGRectGetMidX(self.frame)-70, y: CGRectGetMidY(self.frame)-210)
         cat_food_button.zPosition = 11
@@ -85,7 +85,7 @@ class GameScene: SKScene {
         setUpActions()
         
         //decrease hungry level and happy level
-        var timer = NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector:Selector("decreaseLevel"), userInfo:nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(3, target:self, selector:Selector("decreaseLevel"), userInfo:nil, repeats: true)
         
     }
     
@@ -159,14 +159,14 @@ class GameScene: SKScene {
         }
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             var randomAction = 0
             if cat_fun_button.containsPoint(location){
                 if petActions.count > 0 {
-                    do {
+                    repeat {
                         randomAction = Int(arc4random_uniform(UInt32(petActions.count)))
                     }while randomAction == currentAction
                     
